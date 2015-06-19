@@ -1,24 +1,53 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+<head>
 
-<h1>My First Heading</h1>
+<link rel="stylesheet"	href="https://netdna.bootstrapcdn.com/twitterbootstrap/2.3.1/css/bootstrap-combined.min.css">
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/twitterbootstrap/2.3.1/js/bootstrap.min.js"></script>
 
-<p>My first paragraph.</p>
 
-<script> 
+<meta contents="width=device-width, initial-scale=1.0" name="viewport">
+<script type="text/javascript">
+var _cc = _cc || [];
+_cc.push(['ci', {'sid': '0fa75ec6-a58e-407d-813f-1ba17a1036bc', 'tid': 'Amex-2'}]);
+_cc.push(['st', 1000]); _cc.push(['cf', 507899]);
+_cc.push(['run', ('https:' == document.location.protocol ?'https://' : 'http://') + "staging.cdn-net.com"]);
+(
 
-    var _cc = _cc || [];
-    _cc.push(['ci', {'sid': '0fa75ec6-a58e-407d-813f-1ba17a1036bc', 'tid': 'Amex123'}]);
-    _cc.push(['run', ('https:' == document.location.protocol ? 'https://' : 'http://') + 'staging.cdn-net.com']);
-    (function() {
-        var c = document.createElement('script'); c.type = 'text/javascript'; c.async = true;
-        c.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'staging.cdn-net.com/cc.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(c, s);
-    })();
+function() {
+var c = document.createElement('script'); 
+c.type ='text/javascript'; 
+c.async = true;
+c.src = ('https:' == document.location.protocol ? 'https://' :'http://') + "staging.cdn-net.com" + '/cc.js?ts=' + (new Date()).getTime();
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(c,s);
+})();
 
+function onSubmit(e) {
+e.preventDefault ? e.preventDefault() : e.returnValue = false;
+_cc.push(['cfp', function(payload) {
+document.getElementById("payload").value = payload;
+document.getElementById("loginform").submit();
+}]);
+}
 </script>
-
-
+</head>
+<body>
+	<div class="container">
+		<h1>Demo</h1>
+		<form id="loginform" method="post">
+			<fieldset>
+				<legend>Enter login information below.</legend>
+				<label>Username</label>
+					 <input name="username" type="text">
+				<label>Password</label> 
+					<input id="payload" name="payload" value=""	type="hidden" />
+					 <input name="password" type="password">
+					 <input	name="tid" value="8f8ab316-3c51-4142-8489-0e3120a60730"	type="hidden"> <br>
+				<button class="btn" id="submitButton" onclick="onSubmit(event);" type="submit">Login</button>
+			</fieldset>
+		</form>
+	</div>
 </body>
 </html>
