@@ -10,7 +10,7 @@ var _cc = _cc || [];
 var ustr = Math.random().toString();
 var udat = new Date();
 var utid = ustr.substr(2,5) + udat.getTime() + ustr.substr(7,3);
-alert(utid);
+$("#MyEdit").html(utid);
 _cc.push(['ci', {'sid': '60bbc635cbe945778f4c2e62ecb251ab', 'tid': utid}]);
 _cc.push(['st', 1000]);
 _cc.push(['cf', 507899]);
@@ -36,6 +36,9 @@ function showThankYou(){
 <div class="container">
     <h1>Demo</h1>
     <form id="loginform" method="post">
+      <div id="MyEdit">
+        This text will change
+      </div>
         <fieldset>
             <legend>Enter your login information below.</legend>
             <label>Username</label>
@@ -45,6 +48,7 @@ function showThankYou(){
             <input name="tid" value="jontest12345" type="hidden">
             <br>
             <button class="btn" id="submitButton" onclick="onSubmit(event);" type="submit">Login</button>
+
         </fieldset>
     </form>
     <noscript>
