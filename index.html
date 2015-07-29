@@ -5,8 +5,12 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 <meta contents="width=device-width, initial-scale=1.0" name="viewport">
-<script type="text/javascript">var _cc = _cc || [];
-_cc.push(['ci', {'sid': '3c914828e05d48b097279ca441cd4095', 'tid': 'inauthTest11','site':'1234','UserType':'123891l','TransType':'093lf9sdf'}]);
+<script type="text/javascript">
+var _cc = _cc || [];
+var ustr = Math.random().toString();
+var udat = new Date();
+var utid = ustr.substr(2,5) + udat.getTime() + ustr.substr(7,3);
+_cc.push(['ci', {'sid': '60bbc635cbe945778f4c2e62ecb251ab', 'tid': utid}]);
 _cc.push(['st', 1000]);
 _cc.push(['cf', 507899]);
 _cc.push(['run', ('https:' == document.location.protocol ? 'https://' : 'http://') + "staging.cdn-net.com"]);
@@ -43,7 +47,7 @@ function showThankYou(){
         </fieldset>
     </form>
     <noscript>
-        <img src="https://staging.cdn-net.com/s1.gif?sid=3c914828e05d48b097279ca441cd4095&amp;tid=inauthTest11">
+        <img src="https://staging.cdn-net.com/s1.gif?sid=60bbc635cbe945778f4c2e62ecb251ab&amp;tid=utid">
     </noscript>
     <div id="thankYou" style="display:none;">
         <p>Collection completed</p>
